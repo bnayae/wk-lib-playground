@@ -1,7 +1,7 @@
 import React from 'react';
-import './Button.css';
+import styles from './Button.module.css';
 import { ButtonProps } from './ButtonProps';
 
 export const Button = (props: ButtonProps) => {
-  return <button className="main">{props.label}</button>;
+  return <button className={styles.main}>{props.label}</button>;
 };

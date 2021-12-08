@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/bnayae"
   },
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "scripts": {
     "build": "tsc",
