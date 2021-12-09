@@ -1,4 +1,4 @@
-export interface ButtonProps {
+export interface IButtonProps {
   /**
    * Is this the principal call to action on the page?
    */

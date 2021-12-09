@@ -1,6 +1,6 @@
 import React from 'react';
 import './Button.css';
-import { ButtonProps } from './ButtonProps';
+import { IButtonProps } from './IButtonProps';
 
 /**
  * Primary UI component for user interaction
@@ -11,7 +11,7 @@ export const Button = ({
   backgroundColor,
   label,
   ...props
-}: ButtonProps) => {
+}: IButtonProps) => {
   const mode = primary ? 'button--primary' : 'button--secondary';
   return (
     <button

@@ -26,12 +26,7 @@ export default [
       },
     ],
     plugins: [
-      babel({
-        exclude: 'node_modules/**',
-      }),
       peerDepsExternal(),
-      resolve(),
-      commonjs(),
       typescript({
         tsconfig: './tsconfig.json',
         exclude: [
@@ -42,12 +37,17 @@ export default [
         ],
       }),
       postcss({
+        sourceMap: true,
         // modules: true,
         // plugins: [autoprefixer()],
-        // sourceMap: true,
         // extract: true,
-        minimize: true,
+        // minimize: true,
       }),
+      babel({
+        exclude: 'node_modules/**',
+      }),
+      resolve(),
+      commonjs(),
       terser(),
     ],
   },
