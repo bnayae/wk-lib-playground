@@ -1,8 +1,10 @@
+import babel from 'rollup-plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
+// import autoprefixer from 'autoprefixer';
 import { terser } from 'rollup-plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
@@ -24,6 +26,9 @@ export default [
       },
     ],
     plugins: [
+      babel({
+        exclude: 'node_modules/**',
+      }),
       peerDepsExternal(),
       resolve(),
       commonjs(),
@@ -36,7 +41,13 @@ export default [
           '**/*.stories.tsx',
         ],
       }),
-      postcss(),
+      postcss({
+        // modules: true,
+        // plugins: [autoprefixer()],
+        // sourceMap: true,
+        // extract: true,
+        minimize: true,
+      }),
       terser(),
     ],
   },

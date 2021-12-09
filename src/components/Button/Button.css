@@ -17,14 +17,14 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
 .button--small {
-  font-size: 12px;
-  padding: 10px 16px;
+  font-size: 1rem;
+  padding: 1rem 1.6rem;
 }
 .button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
+  font-size: 2rem;
+  padding: 1.3rem 2.4rem;
 }
 .button--large {
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 3rem;
+  padding: 1.4rem 2.8rem;
 }
